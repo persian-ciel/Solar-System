@@ -17,13 +17,13 @@ const loader = new THREE.TextureLoader();
 // --- SPACE BACKGROUND ---
 const spaceSphereGeometry = new THREE.SphereGeometry(100, 64, 64);
 const spaceSphereMaterial = new THREE.MeshBasicMaterial({
-  map: loader.load("./img/8k_stars_milky_way.jpg"),
+  map: loader.load("/img/8k_stars_milky_way.jpg"),
   side: THREE.BackSide,
 });
 scene.add(new THREE.Mesh(spaceSphereGeometry, spaceSphereMaterial));
 
 // --- SUN ---
-const sunTexture = loader.load("./img/8k_sun.jpg");
+const sunTexture = loader.load("/img/8k_sun.jpg");
 sunTexture.minFilter = THREE.LinearFilter;
 sunTexture.magFilter = THREE.LinearFilter;
 
@@ -56,14 +56,14 @@ scene.add(new THREE.Points(starGeometry, starMaterial));
 const orbitalPeriods = [0.24, 0.62, 1.0, 1.88, 11.86, 29.46, 84.01, 164.8]; // Earth years
 const planetRadii = [0.03, 0.04, 0.045, 0.05, 0.09, 0.08, 0.07, 0.07];
 const planetTextures = [
-  "./img/8k_mercury.jpg",
-  "./img/8k_venus_surface.jpg",
-  "./img/8k_earth_daymap.jpg",
-  "./img/8k_mars.jpg",
-  "./img/8k_jupiter.jpg",
-  "./img/8k_saturn.jpg",
-  "./img/2k_uranus.jpg",
-  "./img/2k_neptune.jpg",
+  "/img/8k_mercury.jpg",
+  "/img/8k_venus_surface.jpg",
+  "/img/8k_earth_daymap.jpg",
+  "/img/8k_mars.jpg",
+  "/img/8k_jupiter.jpg",
+  "/img/8k_saturn.jpg",
+  "/img/2k_uranus.jpg",
+  "/img/2k_neptune.jpg",
 ];
 const orbitCount = 8;
 const orbitGap = 0.4;
